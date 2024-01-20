@@ -7,7 +7,8 @@ import time
 
 cap = None
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+p = "shape_predictor_68_face_landmarks.dat"
+predictor = dlib.shape_predictor(p)
 is_camera_running = False
 
 blink_threshold = 5  # Adjust this threshold for blink sensitivity
