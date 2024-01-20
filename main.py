@@ -4,15 +4,13 @@ import numpy as np
 import dlib
 from imutils import face_utils
 import time
-import pygame
 
-pygame.mixer.init()
 
 class TiredDetectionApp:
     def __init__(self):
         self.cap = None
         self.detector = dlib.get_frontal_face_detector()
-        self.predictor = dlib.shape_predictor("my_dataset\shape_predictor_68_face_landmarks.dat")
+        self.predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
         self.is_camera_running = False
 
         self.blink_threshold = 5  # Adjust this threshold for blink sensitivity
@@ -64,9 +62,6 @@ class TiredDetectionApp:
                             status = "SLEEP !!!"
                             color = (255, 0, 0)
 
-                            # You can add code here to play sound for prolonged eye closure
-                            pygame.mixer.music.load("background_sound\warning.wav")
-                            pygame.mixer.music.play()
 
             # Reset counters and timer if eyes are open
             elif left_blink == 1 or right_blink == 1:
