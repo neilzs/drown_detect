@@ -10,7 +10,7 @@ class TiredDetectionApp:
     def __init__(self):
         self.cap = None
         self.detector = dlib.get_frontal_face_detector()
-        self.predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+        self.predictor = dlib.shape_predictor("./shape_predictor_68_face_landmarks.dat")
         self.is_camera_running = False
 
         self.blink_threshold = 5  # Adjust this threshold for blink sensitivity
