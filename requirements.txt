@@ -6,4 +6,4 @@ dlib-bin
 streamlit
 imutils
 playsound
-libasound2
+
