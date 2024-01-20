@@ -1,7 +1,7 @@
+pygame==2.1.2
 numpy
 Pillow
 opencv-python-headless
 dlib-bin
 streamlit
-pygame
 imutils
