@@ -4,9 +4,7 @@ import numpy as np
 import dlib
 from imutils import face_utils
 import time
-import pygame
 
-pygame.mixer.init()
 
 class TiredDetectionApp:
     def __init__(self):
@@ -63,10 +61,6 @@ class TiredDetectionApp:
                         if elapsed_time > self.sound_duration:
                             status = "SLEEP !!!"
                             color = (255, 0, 0)
-
-                            # You can add code here to play sound for prolonged eye closure
-                            pygame.mixer.music.load("background_sound\warning.wav")
-                            pygame.mixer.music.play()
 
             # Reset counters and timer if eyes are open
             elif left_blink == 1 or right_blink == 1:
