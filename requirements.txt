@@ -1,8 +1,7 @@
 streamlit
 imutils
 numpy
-opencv-python==4.5.5.64
 pygame
 dlib-bin
 cmake
-libgl1-mesa-glx
+opencv-python-headless
